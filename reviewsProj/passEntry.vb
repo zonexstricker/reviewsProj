@@ -164,7 +164,7 @@ Public Class passEntry
         passwordRecovery.Show()
     End Sub
 
+    Private Sub lblStatus_Click(sender As Object, e As EventArgs) Handles lblStatus.Click
 
-
-
+    End Sub
 End Class

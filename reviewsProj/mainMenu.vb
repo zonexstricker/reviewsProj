@@ -1,28 +1,11 @@
-﻿Public Class MainMenu
-
-
-
-
-    Private Sub pbUser_Click(sender As Object, e As EventArgs) Handles pbUser.Click
-        Try
-
-            users.Show()
-
-        Catch ex As Exception
-
-            MsgBox("The form may be open in another program, close other programs using the table and try again")
-
-        End Try
+﻿Public Class mainMenu
+    Private Sub btnAccount_Click(sender As Object, e As EventArgs) Handles btnAccount.Click
+        newAccount.Show()
+        Me.Hide()
     End Sub
-    Private Sub pbStaff_Click(sender As Object, e As EventArgs) Handles pbStaff.Click
-        Try
 
-            staff.Show()
-
-        Catch ex As Exception
-
-            MsgBox("The form may be open in another program, close other programs using the table and try again")
-
-        End Try
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        passEntry.Show()
+        Me.Hide()
     End Sub
 End Class
