@@ -28,7 +28,7 @@ Public Class newAccount
         dsNewRow.Item("FirstName") = txtBoxFirst.Text
         dsNewRow.Item("Surname") = txtBoxSurname.Text
         dsNewRow.Item("UserPass") = txtBoxPassword.Text
-        'dsNewRow.Item("PfP") = strFileName
+        dsNewRow.Item("PfP") = strFileName
         da.Update(ds, "DSUsers")
         MsgBox("Your profile has been added to the database!")
 
@@ -60,8 +60,8 @@ Public Class newAccount
 
     Private Sub btnUploadPfp_Click(sender As Object, e As EventArgs) Handles btnUploadPfp.Click
         fd.Title = "Choose an image"
-        fd.InitialDirectory = "C:\"
-        fd.Filter = "PNG Image (*.png)|*.png"
+        fd.InitialDirectory = "..\"
+        fd.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
         fd.FilterIndex = 2
         fd.RestoreDirectory = True
 
@@ -70,7 +70,8 @@ Public Class newAccount
         End If
 
         pbProfilePic.ImageLocation = strFileName ' sets the picture box profile pic to the one selected by the user after pressing the upload pfp button. Does not send into the database
-
+        Dim parts As String() = strFileName.Split("/")
+        MsgBox(parts())
     End Sub
 
 
