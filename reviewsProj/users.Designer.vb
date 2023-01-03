@@ -41,7 +41,7 @@ Partial Class users
         Me.lblReviewpoint2Gb3 = New System.Windows.Forms.Label()
         Me.lblReviewpoint4Gb3 = New System.Windows.Forms.Label()
         Me.lblReviewpoint3Gb3 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.pbProfilePic = New System.Windows.Forms.PictureBox()
         Me.lblCurrentUser = New System.Windows.Forms.Label()
         Me.gb2 = New System.Windows.Forms.GroupBox()
         Me.lblReviewpoint6Gb2 = New System.Windows.Forms.Label()
@@ -62,6 +62,7 @@ Partial Class users
         Me.btnNext = New System.Windows.Forms.PictureBox()
         Me.btnPrev = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
@@ -69,15 +70,15 @@ Partial Class users
         Me.pbClose = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.gb1.SuspendLayout()
         Me.gb3.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbProfilePic, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gb2.SuspendLayout()
         CType(Me.btnReview, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnNext, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnPrev, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,7 +86,6 @@ Partial Class users
         CType(Me.pbClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblNameOfBus
@@ -93,9 +93,10 @@ Partial Class users
         Me.lblNameOfBus.AutoSize = True
         Me.lblNameOfBus.BackColor = System.Drawing.Color.Transparent
         Me.lblNameOfBus.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNameOfBus.Location = New System.Drawing.Point(138, 104)
+        Me.lblNameOfBus.Location = New System.Drawing.Point(184, 128)
+        Me.lblNameOfBus.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblNameOfBus.Name = "lblNameOfBus"
-        Me.lblNameOfBus.Size = New System.Drawing.Size(121, 16)
+        Me.lblNameOfBus.Size = New System.Drawing.Size(154, 20)
         Me.lblNameOfBus.TabIndex = 0
         Me.lblNameOfBus.Text = "(NAME OF BUSINESS)"
         '
@@ -104,9 +105,10 @@ Partial Class users
         Me.lblBusDesc.AutoSize = True
         Me.lblBusDesc.BackColor = System.Drawing.Color.Transparent
         Me.lblBusDesc.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBusDesc.Location = New System.Drawing.Point(262, 104)
+        Me.lblBusDesc.Location = New System.Drawing.Point(349, 128)
+        Me.lblBusDesc.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblBusDesc.Name = "lblBusDesc"
-        Me.lblBusDesc.Size = New System.Drawing.Size(140, 16)
+        Me.lblBusDesc.Size = New System.Drawing.Size(181, 20)
         Me.lblBusDesc.TabIndex = 1
         Me.lblBusDesc.Text = "(BUSINESS DESCRIPTION)"
         '
@@ -120,72 +122,81 @@ Partial Class users
         Me.gb1.Controls.Add(Me.lblReviewpoint2Gb1)
         Me.gb1.Controls.Add(Me.lblReviewpoint1Gb1)
         Me.gb1.Controls.Add(Me.lblUsernameGb1)
-        Me.gb1.Location = New System.Drawing.Point(119, 124)
+        Me.gb1.Location = New System.Drawing.Point(159, 153)
+        Me.gb1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.gb1.Name = "gb1"
-        Me.gb1.Size = New System.Drawing.Size(214, 178)
+        Me.gb1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gb1.Size = New System.Drawing.Size(285, 219)
         Me.gb1.TabIndex = 3
         Me.gb1.TabStop = False
         '
         'lblReviewpoint6Gb1
         '
         Me.lblReviewpoint6Gb1.AutoSize = True
-        Me.lblReviewpoint6Gb1.Location = New System.Drawing.Point(9, 153)
+        Me.lblReviewpoint6Gb1.Location = New System.Drawing.Point(12, 188)
+        Me.lblReviewpoint6Gb1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint6Gb1.Name = "lblReviewpoint6Gb1"
-        Me.lblReviewpoint6Gb1.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint6Gb1.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint6Gb1.TabIndex = 6
         Me.lblReviewpoint6Gb1.Text = "."
         '
         'lblReviewpoint5Gb1
         '
         Me.lblReviewpoint5Gb1.AutoSize = True
-        Me.lblReviewpoint5Gb1.Location = New System.Drawing.Point(9, 131)
+        Me.lblReviewpoint5Gb1.Location = New System.Drawing.Point(12, 161)
+        Me.lblReviewpoint5Gb1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint5Gb1.Name = "lblReviewpoint5Gb1"
-        Me.lblReviewpoint5Gb1.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint5Gb1.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint5Gb1.TabIndex = 5
         Me.lblReviewpoint5Gb1.Text = "."
         '
         'lblReviewpoint4Gb1
         '
         Me.lblReviewpoint4Gb1.AutoSize = True
-        Me.lblReviewpoint4Gb1.Location = New System.Drawing.Point(9, 109)
+        Me.lblReviewpoint4Gb1.Location = New System.Drawing.Point(12, 134)
+        Me.lblReviewpoint4Gb1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint4Gb1.Name = "lblReviewpoint4Gb1"
-        Me.lblReviewpoint4Gb1.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint4Gb1.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint4Gb1.TabIndex = 4
         Me.lblReviewpoint4Gb1.Text = "."
         '
         'lblReviewpoint3Gb1
         '
         Me.lblReviewpoint3Gb1.AutoSize = True
-        Me.lblReviewpoint3Gb1.Location = New System.Drawing.Point(9, 87)
+        Me.lblReviewpoint3Gb1.Location = New System.Drawing.Point(12, 107)
+        Me.lblReviewpoint3Gb1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint3Gb1.Name = "lblReviewpoint3Gb1"
-        Me.lblReviewpoint3Gb1.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint3Gb1.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint3Gb1.TabIndex = 3
         Me.lblReviewpoint3Gb1.Text = "."
         '
         'lblReviewpoint2Gb1
         '
         Me.lblReviewpoint2Gb1.AutoSize = True
-        Me.lblReviewpoint2Gb1.Location = New System.Drawing.Point(9, 65)
+        Me.lblReviewpoint2Gb1.Location = New System.Drawing.Point(12, 80)
+        Me.lblReviewpoint2Gb1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint2Gb1.Name = "lblReviewpoint2Gb1"
-        Me.lblReviewpoint2Gb1.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint2Gb1.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint2Gb1.TabIndex = 2
         Me.lblReviewpoint2Gb1.Text = "."
         '
         'lblReviewpoint1Gb1
         '
         Me.lblReviewpoint1Gb1.AutoSize = True
-        Me.lblReviewpoint1Gb1.Location = New System.Drawing.Point(9, 43)
+        Me.lblReviewpoint1Gb1.Location = New System.Drawing.Point(12, 53)
+        Me.lblReviewpoint1Gb1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint1Gb1.Name = "lblReviewpoint1Gb1"
-        Me.lblReviewpoint1Gb1.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint1Gb1.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint1Gb1.TabIndex = 1
         Me.lblReviewpoint1Gb1.Text = "."
         '
         'lblUsernameGb1
         '
         Me.lblUsernameGb1.AutoSize = True
-        Me.lblUsernameGb1.Location = New System.Drawing.Point(9, 20)
+        Me.lblUsernameGb1.Location = New System.Drawing.Point(12, 25)
+        Me.lblUsernameGb1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblUsernameGb1.Name = "lblUsernameGb1"
-        Me.lblUsernameGb1.Size = New System.Drawing.Size(10, 13)
+        Me.lblUsernameGb1.Size = New System.Drawing.Size(10, 16)
         Me.lblUsernameGb1.TabIndex = 0
         Me.lblUsernameGb1.Text = "."
         '
@@ -195,10 +206,9 @@ Partial Class users
         Me.wiganNews.BackColor = System.Drawing.Color.DarkRed
         Me.wiganNews.Font = New System.Drawing.Font("Times New Roman", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.wiganNews.ForeColor = System.Drawing.Color.Black
-        Me.wiganNews.Location = New System.Drawing.Point(11, 12)
-        Me.wiganNews.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.wiganNews.Location = New System.Drawing.Point(15, 15)
         Me.wiganNews.Name = "wiganNews"
-        Me.wiganNews.Size = New System.Drawing.Size(269, 55)
+        Me.wiganNews.Size = New System.Drawing.Size(337, 68)
         Me.wiganNews.TabIndex = 11
         Me.wiganNews.Text = "Wigan News"
         '
@@ -212,92 +222,103 @@ Partial Class users
         Me.gb3.Controls.Add(Me.lblReviewpoint2Gb3)
         Me.gb3.Controls.Add(Me.lblReviewpoint4Gb3)
         Me.gb3.Controls.Add(Me.lblReviewpoint3Gb3)
-        Me.gb3.Location = New System.Drawing.Point(559, 124)
+        Me.gb3.Location = New System.Drawing.Point(745, 153)
+        Me.gb3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.gb3.Name = "gb3"
-        Me.gb3.Size = New System.Drawing.Size(214, 178)
+        Me.gb3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gb3.Size = New System.Drawing.Size(285, 219)
         Me.gb3.TabIndex = 5
         Me.gb3.TabStop = False
         '
         'lblReviewpoint1Gb3
         '
         Me.lblReviewpoint1Gb3.AutoSize = True
-        Me.lblReviewpoint1Gb3.Location = New System.Drawing.Point(6, 43)
+        Me.lblReviewpoint1Gb3.Location = New System.Drawing.Point(8, 53)
+        Me.lblReviewpoint1Gb3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint1Gb3.Name = "lblReviewpoint1Gb3"
-        Me.lblReviewpoint1Gb3.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint1Gb3.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint1Gb3.TabIndex = 9
         Me.lblReviewpoint1Gb3.Text = "."
         '
         'lblReviewpoint6Gb3
         '
         Me.lblReviewpoint6Gb3.AutoSize = True
-        Me.lblReviewpoint6Gb3.Location = New System.Drawing.Point(6, 153)
+        Me.lblReviewpoint6Gb3.Location = New System.Drawing.Point(8, 188)
+        Me.lblReviewpoint6Gb3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint6Gb3.Name = "lblReviewpoint6Gb3"
-        Me.lblReviewpoint6Gb3.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint6Gb3.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint6Gb3.TabIndex = 14
         Me.lblReviewpoint6Gb3.Text = "."
         '
         'lblUsernameGb3
         '
         Me.lblUsernameGb3.AutoSize = True
-        Me.lblUsernameGb3.Location = New System.Drawing.Point(6, 20)
+        Me.lblUsernameGb3.Location = New System.Drawing.Point(8, 25)
+        Me.lblUsernameGb3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblUsernameGb3.Name = "lblUsernameGb3"
-        Me.lblUsernameGb3.Size = New System.Drawing.Size(10, 13)
+        Me.lblUsernameGb3.Size = New System.Drawing.Size(10, 16)
         Me.lblUsernameGb3.TabIndex = 8
         Me.lblUsernameGb3.Text = "."
         '
         'lblReviewpoint5Gb3
         '
         Me.lblReviewpoint5Gb3.AutoSize = True
-        Me.lblReviewpoint5Gb3.Location = New System.Drawing.Point(6, 131)
+        Me.lblReviewpoint5Gb3.Location = New System.Drawing.Point(8, 161)
+        Me.lblReviewpoint5Gb3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint5Gb3.Name = "lblReviewpoint5Gb3"
-        Me.lblReviewpoint5Gb3.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint5Gb3.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint5Gb3.TabIndex = 13
         Me.lblReviewpoint5Gb3.Text = "."
         '
         'lblReviewpoint2Gb3
         '
         Me.lblReviewpoint2Gb3.AutoSize = True
-        Me.lblReviewpoint2Gb3.Location = New System.Drawing.Point(6, 65)
+        Me.lblReviewpoint2Gb3.Location = New System.Drawing.Point(8, 80)
+        Me.lblReviewpoint2Gb3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint2Gb3.Name = "lblReviewpoint2Gb3"
-        Me.lblReviewpoint2Gb3.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint2Gb3.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint2Gb3.TabIndex = 10
         Me.lblReviewpoint2Gb3.Text = "."
         '
         'lblReviewpoint4Gb3
         '
         Me.lblReviewpoint4Gb3.AutoSize = True
-        Me.lblReviewpoint4Gb3.Location = New System.Drawing.Point(6, 109)
+        Me.lblReviewpoint4Gb3.Location = New System.Drawing.Point(8, 134)
+        Me.lblReviewpoint4Gb3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint4Gb3.Name = "lblReviewpoint4Gb3"
-        Me.lblReviewpoint4Gb3.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint4Gb3.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint4Gb3.TabIndex = 12
         Me.lblReviewpoint4Gb3.Text = "."
         '
         'lblReviewpoint3Gb3
         '
         Me.lblReviewpoint3Gb3.AutoSize = True
-        Me.lblReviewpoint3Gb3.Location = New System.Drawing.Point(6, 87)
+        Me.lblReviewpoint3Gb3.Location = New System.Drawing.Point(8, 107)
+        Me.lblReviewpoint3Gb3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint3Gb3.Name = "lblReviewpoint3Gb3"
-        Me.lblReviewpoint3Gb3.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint3Gb3.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint3Gb3.TabIndex = 11
         Me.lblReviewpoint3Gb3.Text = "."
         '
-        'PictureBox1
+        'pbProfilePic
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.reviewsProj.My.Resources.Resources.prof_pic
-        Me.PictureBox1.Location = New System.Drawing.Point(843, 14)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(57, 53)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 20
-        Me.PictureBox1.TabStop = False
+        Me.pbProfilePic.BackColor = System.Drawing.Color.Transparent
+        Me.pbProfilePic.Image = Global.reviewsProj.My.Resources.Resources.prof_pic
+        Me.pbProfilePic.Location = New System.Drawing.Point(1124, 17)
+        Me.pbProfilePic.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pbProfilePic.Name = "pbProfilePic"
+        Me.pbProfilePic.Size = New System.Drawing.Size(76, 65)
+        Me.pbProfilePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbProfilePic.TabIndex = 20
+        Me.pbProfilePic.TabStop = False
         '
         'lblCurrentUser
         '
         Me.lblCurrentUser.AutoSize = True
-        Me.lblCurrentUser.Location = New System.Drawing.Point(840, 70)
+        Me.lblCurrentUser.Location = New System.Drawing.Point(1120, 86)
+        Me.lblCurrentUser.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCurrentUser.Name = "lblCurrentUser"
-        Me.lblCurrentUser.Size = New System.Drawing.Size(74, 13)
+        Me.lblCurrentUser.Size = New System.Drawing.Size(92, 16)
         Me.lblCurrentUser.TabIndex = 19
         Me.lblCurrentUser.Text = "[USERNAME]"
         Me.lblCurrentUser.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -312,72 +333,81 @@ Partial Class users
         Me.gb2.Controls.Add(Me.lblReviewpoint2Gb2)
         Me.gb2.Controls.Add(Me.lblReviewpoint1Gb2)
         Me.gb2.Controls.Add(Me.lblUsernameGb2)
-        Me.gb2.Location = New System.Drawing.Point(339, 124)
+        Me.gb2.Location = New System.Drawing.Point(452, 153)
+        Me.gb2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.gb2.Name = "gb2"
-        Me.gb2.Size = New System.Drawing.Size(214, 178)
+        Me.gb2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gb2.Size = New System.Drawing.Size(285, 219)
         Me.gb2.TabIndex = 9
         Me.gb2.TabStop = False
         '
         'lblReviewpoint6Gb2
         '
         Me.lblReviewpoint6Gb2.AutoSize = True
-        Me.lblReviewpoint6Gb2.Location = New System.Drawing.Point(9, 153)
+        Me.lblReviewpoint6Gb2.Location = New System.Drawing.Point(12, 188)
+        Me.lblReviewpoint6Gb2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint6Gb2.Name = "lblReviewpoint6Gb2"
-        Me.lblReviewpoint6Gb2.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint6Gb2.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint6Gb2.TabIndex = 6
         Me.lblReviewpoint6Gb2.Text = "."
         '
         'lblReviewpoint5Gb2
         '
         Me.lblReviewpoint5Gb2.AutoSize = True
-        Me.lblReviewpoint5Gb2.Location = New System.Drawing.Point(9, 131)
+        Me.lblReviewpoint5Gb2.Location = New System.Drawing.Point(12, 161)
+        Me.lblReviewpoint5Gb2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint5Gb2.Name = "lblReviewpoint5Gb2"
-        Me.lblReviewpoint5Gb2.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint5Gb2.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint5Gb2.TabIndex = 5
         Me.lblReviewpoint5Gb2.Text = "."
         '
         'lblReviewpoint4Gb2
         '
         Me.lblReviewpoint4Gb2.AutoSize = True
-        Me.lblReviewpoint4Gb2.Location = New System.Drawing.Point(9, 109)
+        Me.lblReviewpoint4Gb2.Location = New System.Drawing.Point(12, 134)
+        Me.lblReviewpoint4Gb2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint4Gb2.Name = "lblReviewpoint4Gb2"
-        Me.lblReviewpoint4Gb2.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint4Gb2.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint4Gb2.TabIndex = 4
         Me.lblReviewpoint4Gb2.Text = "."
         '
         'lblReviewpoint3Gb2
         '
         Me.lblReviewpoint3Gb2.AutoSize = True
-        Me.lblReviewpoint3Gb2.Location = New System.Drawing.Point(9, 87)
+        Me.lblReviewpoint3Gb2.Location = New System.Drawing.Point(12, 107)
+        Me.lblReviewpoint3Gb2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint3Gb2.Name = "lblReviewpoint3Gb2"
-        Me.lblReviewpoint3Gb2.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint3Gb2.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint3Gb2.TabIndex = 3
         Me.lblReviewpoint3Gb2.Text = "."
         '
         'lblReviewpoint2Gb2
         '
         Me.lblReviewpoint2Gb2.AutoSize = True
-        Me.lblReviewpoint2Gb2.Location = New System.Drawing.Point(9, 65)
+        Me.lblReviewpoint2Gb2.Location = New System.Drawing.Point(12, 80)
+        Me.lblReviewpoint2Gb2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint2Gb2.Name = "lblReviewpoint2Gb2"
-        Me.lblReviewpoint2Gb2.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint2Gb2.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint2Gb2.TabIndex = 2
         Me.lblReviewpoint2Gb2.Text = "."
         '
         'lblReviewpoint1Gb2
         '
         Me.lblReviewpoint1Gb2.AutoSize = True
-        Me.lblReviewpoint1Gb2.Location = New System.Drawing.Point(9, 43)
+        Me.lblReviewpoint1Gb2.Location = New System.Drawing.Point(12, 53)
+        Me.lblReviewpoint1Gb2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReviewpoint1Gb2.Name = "lblReviewpoint1Gb2"
-        Me.lblReviewpoint1Gb2.Size = New System.Drawing.Size(10, 13)
+        Me.lblReviewpoint1Gb2.Size = New System.Drawing.Size(10, 16)
         Me.lblReviewpoint1Gb2.TabIndex = 1
         Me.lblReviewpoint1Gb2.Text = "."
         '
         'lblUsernameGb2
         '
         Me.lblUsernameGb2.AutoSize = True
-        Me.lblUsernameGb2.Location = New System.Drawing.Point(9, 20)
+        Me.lblUsernameGb2.Location = New System.Drawing.Point(12, 25)
+        Me.lblUsernameGb2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblUsernameGb2.Name = "lblUsernameGb2"
-        Me.lblUsernameGb2.Size = New System.Drawing.Size(10, 13)
+        Me.lblUsernameGb2.Size = New System.Drawing.Size(10, 16)
         Me.lblUsernameGb2.TabIndex = 0
         Me.lblUsernameGb2.Text = "."
         '
@@ -386,10 +416,9 @@ Partial Class users
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(778, 144)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(1037, 177)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 16)
+        Me.Label1.Size = New System.Drawing.Size(76, 20)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Username"
         '
@@ -398,10 +427,9 @@ Partial Class users
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(778, 167)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(1037, 206)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(84, 16)
+        Me.Label2.Size = New System.Drawing.Size(109, 20)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "Delivery Speed"
         '
@@ -410,10 +438,9 @@ Partial Class users
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(778, 188)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(1037, 231)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(104, 16)
+        Me.Label3.Size = New System.Drawing.Size(132, 20)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Quality of Product"
         '
@@ -422,10 +449,9 @@ Partial Class users
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(778, 232)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(1037, 286)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(91, 16)
+        Me.Label4.Size = New System.Drawing.Size(117, 20)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "Communication"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -435,10 +461,9 @@ Partial Class users
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(778, 210)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Location = New System.Drawing.Point(1037, 258)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(112, 16)
+        Me.Label5.Size = New System.Drawing.Size(142, 20)
         Me.Label5.TabIndex = 16
         Me.Label5.Text = "Quantity of Product"
         '
@@ -447,10 +472,9 @@ Partial Class users
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(778, 254)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(1037, 313)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(57, 16)
+        Me.Label6.Size = New System.Drawing.Size(73, 20)
         Me.Label6.TabIndex = 17
         Me.Label6.Text = "Response"
         '
@@ -459,10 +483,9 @@ Partial Class users
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(778, 276)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Location = New System.Drawing.Point(1037, 340)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(97, 16)
+        Me.Label7.Size = New System.Drawing.Size(124, 20)
         Me.Label7.TabIndex = 18
         Me.Label7.Text = "Customer Service"
         '
@@ -471,9 +494,10 @@ Partial Class users
         Me.btnReview.BackColor = System.Drawing.Color.Transparent
         Me.btnReview.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnReview.Image = Global.reviewsProj.My.Resources.Resources.BtnReview
-        Me.btnReview.Location = New System.Drawing.Point(642, 19)
+        Me.btnReview.Location = New System.Drawing.Point(856, 23)
+        Me.btnReview.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnReview.Name = "btnReview"
-        Me.btnReview.Size = New System.Drawing.Size(193, 63)
+        Me.btnReview.Size = New System.Drawing.Size(257, 78)
         Me.btnReview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btnReview.TabIndex = 22
         Me.btnReview.TabStop = False
@@ -483,9 +507,10 @@ Partial Class users
         Me.btnNext.BackColor = System.Drawing.Color.Transparent
         Me.btnNext.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNext.Image = Global.reviewsProj.My.Resources.Resources.BtnNext
-        Me.btnNext.Location = New System.Drawing.Point(473, 312)
+        Me.btnNext.Location = New System.Drawing.Point(631, 384)
+        Me.btnNext.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(112, 61)
+        Me.btnNext.Size = New System.Drawing.Size(149, 75)
         Me.btnNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btnNext.TabIndex = 23
         Me.btnNext.TabStop = False
@@ -495,9 +520,10 @@ Partial Class users
         Me.btnPrev.BackColor = System.Drawing.Color.Transparent
         Me.btnPrev.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnPrev.Image = Global.reviewsProj.My.Resources.Resources.BtnBack
-        Me.btnPrev.Location = New System.Drawing.Point(355, 312)
+        Me.btnPrev.Location = New System.Drawing.Point(473, 384)
+        Me.btnPrev.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnPrev.Name = "btnPrev"
-        Me.btnPrev.Size = New System.Drawing.Size(112, 61)
+        Me.btnPrev.Size = New System.Drawing.Size(149, 75)
         Me.btnPrev.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btnPrev.TabIndex = 24
         Me.btnPrev.TabStop = False
@@ -507,21 +533,34 @@ Partial Class users
         Me.Panel1.BackColor = System.Drawing.Color.DarkRed
         Me.Panel1.Controls.Add(Me.PictureBox6)
         Me.Panel1.Controls.Add(Me.PictureBox5)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.pbProfilePic)
         Me.Panel1.Controls.Add(Me.lblCurrentUser)
         Me.Panel1.Controls.Add(Me.btnReview)
         Me.Panel1.Controls.Add(Me.wiganNews)
-        Me.Panel1.Location = New System.Drawing.Point(0, -3)
+        Me.Panel1.Location = New System.Drawing.Point(0, -4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(953, 96)
+        Me.Panel1.Size = New System.Drawing.Size(1271, 118)
         Me.Panel1.TabIndex = 27
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = Global.reviewsProj.My.Resources.Resources.black_cube
+        Me.PictureBox6.Location = New System.Drawing.Point(0, -103)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(13, 479)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox6.TabIndex = 32
+        Me.PictureBox6.TabStop = False
         '
         'PictureBox5
         '
         Me.PictureBox5.Image = Global.reviewsProj.My.Resources.Resources.black_cube
-        Me.PictureBox5.Location = New System.Drawing.Point(-1, 3)
+        Me.PictureBox5.Location = New System.Drawing.Point(-1, 4)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(949, 10)
+        Me.PictureBox5.Size = New System.Drawing.Size(1265, 12)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox5.TabIndex = 31
         Me.PictureBox5.TabStop = False
@@ -532,17 +571,19 @@ Partial Class users
         Me.Panel2.Controls.Add(Me.PictureBox4)
         Me.Panel2.Controls.Add(Me.pbBack)
         Me.Panel2.Controls.Add(Me.pbClose)
-        Me.Panel2.Location = New System.Drawing.Point(0, 91)
+        Me.Panel2.Location = New System.Drawing.Point(0, 112)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(98, 320)
+        Me.Panel2.Size = New System.Drawing.Size(131, 394)
         Me.Panel2.TabIndex = 28
         '
         'PictureBox4
         '
         Me.PictureBox4.Image = Global.reviewsProj.My.Resources.Resources.black_cube
-        Me.PictureBox4.Location = New System.Drawing.Point(0, -91)
+        Me.PictureBox4.Location = New System.Drawing.Point(0, -112)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(10, 389)
+        Me.PictureBox4.Size = New System.Drawing.Size(13, 479)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox4.TabIndex = 31
         Me.PictureBox4.TabStop = False
@@ -551,9 +592,10 @@ Partial Class users
         '
         Me.pbBack.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pbBack.Image = Global.reviewsProj.My.Resources.Resources.backarrow
-        Me.pbBack.Location = New System.Drawing.Point(21, 164)
+        Me.pbBack.Location = New System.Drawing.Point(28, 202)
+        Me.pbBack.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pbBack.Name = "pbBack"
-        Me.pbBack.Size = New System.Drawing.Size(53, 47)
+        Me.pbBack.Size = New System.Drawing.Size(71, 58)
         Me.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbBack.TabIndex = 30
         Me.pbBack.TabStop = False
@@ -562,9 +604,10 @@ Partial Class users
         '
         Me.pbClose.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pbClose.Image = Global.reviewsProj.My.Resources.Resources.black_power_button_hi
-        Me.pbClose.Location = New System.Drawing.Point(21, 222)
+        Me.pbClose.Location = New System.Drawing.Point(28, 273)
+        Me.pbClose.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pbClose.Name = "pbClose"
-        Me.pbClose.Size = New System.Drawing.Size(58, 61)
+        Me.pbClose.Size = New System.Drawing.Size(77, 75)
         Me.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbClose.TabIndex = 29
         Me.pbClose.TabStop = False
@@ -572,9 +615,10 @@ Partial Class users
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.reviewsProj.My.Resources.Resources.black_cube
-        Me.PictureBox2.Location = New System.Drawing.Point(96, 91)
+        Me.PictureBox2.Location = New System.Drawing.Point(128, 112)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(10, 297)
+        Me.PictureBox2.Size = New System.Drawing.Size(13, 366)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 29
         Me.PictureBox2.TabStop = False
@@ -582,30 +626,21 @@ Partial Class users
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.reviewsProj.My.Resources.Resources.black_cube
-        Me.PictureBox3.Location = New System.Drawing.Point(104, 91)
+        Me.PictureBox3.Location = New System.Drawing.Point(139, 112)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(852, 10)
+        Me.PictureBox3.Size = New System.Drawing.Size(1136, 12)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 30
         Me.PictureBox3.TabStop = False
         '
-        'PictureBox6
-        '
-        Me.PictureBox6.Image = Global.reviewsProj.My.Resources.Resources.black_cube
-        Me.PictureBox6.Location = New System.Drawing.Point(0, -84)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(10, 389)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox6.TabIndex = 32
-        Me.PictureBox6.TabStop = False
-        '
         'users
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.reviewsProj.My.Resources.Resources.bckgrnd
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(948, 385)
+        Me.ClientSize = New System.Drawing.Size(1264, 474)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Panel2)
@@ -624,13 +659,14 @@ Partial Class users
         Me.Controls.Add(Me.gb1)
         Me.Controls.Add(Me.lblBusDesc)
         Me.Controls.Add(Me.lblNameOfBus)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "users"
         Me.Text = "Users"
         Me.gb1.ResumeLayout(False)
         Me.gb1.PerformLayout()
         Me.gb3.ResumeLayout(False)
         Me.gb3.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbProfilePic, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gb2.ResumeLayout(False)
         Me.gb2.PerformLayout()
         CType(Me.btnReview, System.ComponentModel.ISupportInitialize).EndInit()
@@ -638,6 +674,7 @@ Partial Class users
         CType(Me.btnPrev, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -645,7 +682,6 @@ Partial Class users
         CType(Me.pbClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -688,7 +724,7 @@ Partial Class users
     Friend WithEvents btnPrev As PictureBox
     Friend WithEvents btnReview As PictureBox
     Friend WithEvents wiganNews As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents pbProfilePic As PictureBox
     Friend WithEvents lblCurrentUser As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel

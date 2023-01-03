@@ -22,7 +22,8 @@ Public Class verifiedReviews
         End If
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        lblCurrentUser.Text = UserLoggedIn
+        pbProfilePic.ImageLocation = profilePicLookup(userOrAdmin:=False)
 
         conn.Open()
 

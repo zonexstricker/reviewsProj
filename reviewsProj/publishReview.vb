@@ -102,5 +102,8 @@ Public Class publishReview
         End If
     End Sub
 
-
+    Private Sub publishReview_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblCurrentUser.Text = UserLoggedIn
+        pbProfilePic.ImageLocation = profilePicLookup(userOrAdmin:=True)
+    End Sub
 End Class

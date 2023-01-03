@@ -11,7 +11,8 @@ Public Class unverifiedReviews
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'ReviewsDBDataSet.unverifiedReviews' table. You can move, or remove it, as needed.
         Me.UnverifiedReviewsTableAdapter.Fill(Me.ReviewsDBDataSet.unverifiedReviews)
-
+        lblCurrentUser.Text = UserLoggedIn
+        pbProfilePic.ImageLocation = profilePicLookup(userOrAdmin:=False)
 
         conn.Open()
 

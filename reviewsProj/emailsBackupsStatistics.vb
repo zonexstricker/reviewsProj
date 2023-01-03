@@ -18,6 +18,9 @@ Public Class emailsBackupsStatistics
     Dim sql As String 'The sql command
 
     Private Sub Graph_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblCurrentUser.Text = UserLoggedIn
+        pbProfilePic.ImageLocation = profilePicLookup(userOrAdmin:=False)
+
         sql = "SELECT Reviews.SiteID, Count(Reviews.UserID) AS CountOfUserID FROM Reviews GROUP BY Reviews.SiteID"
         conn.Open()
         da = New OleDb.OleDbDataAdapter(sql, conn)
@@ -33,12 +36,13 @@ Public Class emailsBackupsStatistics
         Dim Series1 As Series = New Series()
         Dim Chart1 = New Chart()
         Me.Controls.Add(Chart1)
+
         Series1.ChartType = SeriesChartType.Bar
         ChartArea1.Name = "ChartArea1"
         Chart1.ChartAreas.Add(ChartArea1)
         Legend1.Name = "Legend1"
         Chart1.Legends.Add(Legend1)
-        Chart1.Location = New System.Drawing.Point(13, 13)
+        Chart1.Location = New System.Drawing.Point(12, 119)
         Chart1.Name = "Review Chart"
         Chart1.Titles.Add("Review Chart")
         Series1.Name = "Review Chart"
@@ -52,7 +56,7 @@ Public Class emailsBackupsStatistics
 
         Chart1.DataSource = ds.Tables("DSRev")
         Chart1.Palette = ChartColorPalette.Chocolate
-        Chart1.BackColor() = System.Drawing.Color.DarkRed
+        Chart1.BackColor = System.Drawing.Color.Transparent
         Chart1.Cursor = System.Windows.Forms.Cursors.No
 
 

@@ -2,6 +2,7 @@
 
 
 Public Class staff
+
     Private Sub pbUnv_Click(sender As Object, e As EventArgs) Handles pbUnv.Click
         unverifiedReviews.Show()
     End Sub
@@ -21,6 +22,7 @@ Public Class staff
 
     Private Sub staff_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblCurrentUser.Text = UserLoggedIn
+        pbProfilePic.ImageLocation = profilePicLookup(userOrAdmin:=False)
     End Sub
 
     Private Sub btnEBS_Click(sender As Object, e As EventArgs) Handles btnEBS.Click

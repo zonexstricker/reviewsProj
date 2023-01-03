@@ -10,24 +10,22 @@ Public Class users
     Dim da As New OleDb.OleDbDataAdapter 'the data adapter is used to push data from vb into access and access into vb
     Dim sql As String 'The sql command
 
-
-
-
-
-
-
-
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
         conn.Open()
 
+        pbProfilePic.ImageLocation = profilePicLookup(userOrAdmin:=True)
+
         sql = "SELECT UserID, UserPass FROM Users"
         da = New OleDb.OleDbDataAdapter(sql, conn)
         da.Fill(ds, "DSUsers")
 
+
+
         Call FillDataSets()
         lblCurrentUser.Text = UserLoggedIn
+
     End Sub
 
 

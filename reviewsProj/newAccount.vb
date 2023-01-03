@@ -37,16 +37,6 @@ Public Class newAccount
 
     End Sub
 
-
-
-
-
-
-
-
-
-
-
     Private Sub pbHideShow_Click(sender As Object, e As EventArgs) Handles pbHideShow.Click 'shows and hides the password box
         If txtBoxPassword.UseSystemPasswordChar = True Then
             txtBoxPassword.UseSystemPasswordChar = False
@@ -70,8 +60,8 @@ Public Class newAccount
         End If
 
         pbProfilePic.ImageLocation = strFileName ' sets the picture box profile pic to the one selected by the user after pressing the upload pfp button. Does not send into the database
-        Dim parts As String() = strFileName.Split("/")
-        MsgBox(parts())
+        Dim parts As String() = strFileName.Split("\")
+        strFileName = parts(parts.Length - 1) 'sets the variable to the correct file name
     End Sub
 
 

@@ -1,11 +1,13 @@
 ﻿Public Class mainMenu
-    Private Sub btnAccount_Click(sender As Object, e As EventArgs) Handles btnAccount.Click
+    Private Sub btnNewAccount_Click(sender As Object, e As EventArgs) Handles btnNewAccount.Click
         newAccount.Show()
         Me.Hide()
     End Sub
 
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+    Private Sub btnLogin_Click_1(sender As Object, e As EventArgs) Handles btnLogin.Click
         passEntry.Show()
         Me.Hide()
     End Sub
+
+
 End Class
