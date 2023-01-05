@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class publishReview
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class publishReview
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -45,7 +45,6 @@ Partial Class publishReview
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.wiganNews = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.pbProfilePic, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -334,15 +333,6 @@ Partial Class publishReview
         Me.wiganNews.TabIndex = 11
         Me.wiganNews.Text = "Wigan News"
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(382, 504)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(70, 41)
-        Me.Button1.TabIndex = 34
-        Me.Button1.Text = "testicle"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'publishReview
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -350,7 +340,6 @@ Partial Class publishReview
         Me.BackgroundImage = Global.reviewsProj.My.Resources.Resources.bckgrnd
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(478, 558)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.txtBoxSiteName)
@@ -406,5 +395,4 @@ Partial Class publishReview
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents wiganNews As Label
-    Friend WithEvents Button1 As Button
 End Class

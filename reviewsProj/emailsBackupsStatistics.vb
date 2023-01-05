@@ -41,7 +41,7 @@ Public Class emailsBackupsStatistics
         Chart1.ChartAreas.Add(ChartArea1)
         Legend1.Name = "Legend1"
         Chart1.Legends.Add(Legend1)
-        Chart1.Location = New System.Drawing.Point(12, 119)
+        Chart1.Location = New System.Drawing.Point(50, 120)
         Chart1.Name = "Review Chart"
         Chart1.Titles.Add("Review Chart")
         Series1.Name = "Review Chart"
@@ -59,8 +59,47 @@ Public Class emailsBackupsStatistics
         Chart1.Cursor = System.Windows.Forms.Cursors.No
 
 
+        Call graph2()
 
+    End Sub
+    Sub graph2()
+        sql = "SELECT Reviews.UserID, Count(Reviews.ReviewID) AS CountOfReviewID FROM Reviews GROUP BY Reviews.UserID;"
 
+        da = New OleDb.OleDbDataAdapter(sql, conn)
+        Dim ds As New DataSet()
+        da.Fill(ds, "DSRev") 'this is the dataset made from the table "Products"
+
+        MaxRows = ds.Tables("DSRev").Rows.Count
+        curRow = 0
+        MaxCol = ds.Tables("DSRev").Columns.Count
+
+        Dim ChartArea1 As ChartArea = New ChartArea()
+        Dim Legend1 As Legend = New Legend()
+        Dim Series1 As Series = New Series()
+        Dim Chart1 = New Chart()
+        Me.Controls.Add(Chart1)
+
+        Series1.ChartType = SeriesChartType.Bar
+        ChartArea1.Name = "ChartArea1"
+        Chart1.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Chart1.Legends.Add(Legend1)
+        Chart1.Location = New System.Drawing.Point(500, 120)
+        Chart1.Name = "Review Chart"
+        Chart1.Titles.Add("Review Chart")
+        Series1.Name = "Review Chart"
+        Chart1.Titles.Add("Review Chart")
+        Series1.Name = "Review"
+        Chart1.Series.Add(Series1)
+        Chart1.Size = New System.Drawing.Size(400, 200)
+
+        Chart1.Series("Review").XValueMember = "UserID"
+        Chart1.Series("Review").YValueMembers = "CountOfReviewID"
+
+        Chart1.DataSource = ds.Tables("DSRev")
+        Chart1.Palette = ChartColorPalette.Chocolate
+        Chart1.BackColor = System.Drawing.Color.Transparent
+        Chart1.Cursor = System.Windows.Forms.Cursors.No
     End Sub
 
     Private Sub btnBackUp_Click(sender As Object, e As EventArgs) Handles btnBackUp.Click

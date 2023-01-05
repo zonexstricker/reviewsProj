@@ -90,6 +90,7 @@ Public Class publishReview
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click 'this calls the subroutines used to send the data to the unverified table via clicking on the submit button
         Call validateData()
+        'Call email()
         If validationCleared = 1 Then
             Call siteNameToID()
             If intSiteNamePass = 0 Then
@@ -139,44 +140,44 @@ Public Class publishReview
 
 
 
-    Private Sub email()
-        sql = "SELECT UserID FROM Users"
-        da = New OleDb.OleDbDataAdapter(sql, conn)
-        da.Fill(ds, "DSEmail") 'this is the dataset made from the table "Sites"
-        Dim emailaddress() As String
+    'Private Sub email()
+    '    sql = "SELECT UserID FROM Users"
+    '    da = New OleDb.OleDbDataAdapter(sql, conn)
+    '    da.Fill(ds, "DSEmail") 'this is the dataset made from the table "Sites"
+    '    Dim emailaddress() As String
 
-        MaxRows = ds.Tables("DSEmail").Rows.Count
-        ReDim emailaddress(MaxRows - 1)
+    '    MaxRows = ds.Tables("DSEmail").Rows.Count
+    '    ReDim emailaddress(MaxRows - 1)
 
-        For i = 0 To MaxRows - 1
-            emailaddress(i) = ds.Tables("DSEmail").Rows(i).Item(0)
-        Next
+    '    For i = 0 To MaxRows - 1
+    '        emailaddress(i) = ds.Tables("DSEmail").Rows(i).Item(0)
+    '    Next
 
-        Dim OutlookMessage As outlook.MailItem          'queoted because reqiuered libary Is Not improted into the system  
-        Dim AppOutLook As New outlook.Application
+    '    Dim OutlookMessage As outlook.MailItem          'queoted because reqiuered libary Is Not improted into the system  
+    '    Dim AppOutLook As New outlook.Application
 
-        Dim objNS As outlook._NameSpace = AppOutLook.Session
-        Dim objFolder As outlook.MAPIFolder
-        objFolder = objNS.GetDefaultFolder(outlook.OlDefaultFolders.olFolderDrafts)
-        'Try
-        OutlookMessage = AppOutLook.CreateItem(outlook.OlItemType.olMailItem)
+    '    Dim objNS As outlook._NameSpace = AppOutLook.Session
+    '    Dim objFolder As outlook.MAPIFolder
+    '    objFolder = objNS.GetDefaultFolder(outlook.OlDefaultFolders.olFolderDrafts)
+    '    'Try
+    '    OutlookMessage = AppOutLook.CreateItem(outlook.OlItemType.olMailItem)
 
-        Dim Recipents As outlook.Recipients = OutlookMessage.Recipients
-        For i = 0 To MaxRows - 1
-            Recipents.Add("ololololiviaw@gmail.com")
-        Next
-        OutlookMessage.Subject = "Sending through Outlook"
-        OutlookMessage.Body = "Testing outlook Mail"
-        OutlookMessage.BodyFormat = outlook.OlBodyFormat.olFormatHTML
-        OutlookMessage.Save()
-        OutlookMessage.Move(objFolder)
-        'Catch ex As Exception
-        '    MessageBox.Show("Mail could not be sent")
-        'End Try
-    End Sub
+    '    Dim Recipents As outlook.Recipients = OutlookMessage.Recipients
+    '    For i = 0 To MaxRows - 1
+    '        Recipents.Add("ololololiviaw@gmail.com")
+    '    Next
+    '    OutlookMessage.Subject = "Sending through Outlook"
+    '    OutlookMessage.Body = "Testing outlook Mail"
+    '    OutlookMessage.BodyFormat = outlook.OlBodyFormat.olFormatHTML
+    '    OutlookMessage.Save()
+    '    OutlookMessage.Move(objFolder)
+    '    'Catch ex As Exception
+    '    '    MessageBox.Show("Mail could not be sent")
+    '    'End Try
+    'End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Call email()
+    'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    '    Call email()
 
-    End Sub
+    'End Sub
 End Class

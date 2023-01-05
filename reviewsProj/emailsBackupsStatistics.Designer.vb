@@ -51,14 +51,14 @@ Partial Class emailsBackupsStatistics
         Me.Panel1.Location = New System.Drawing.Point(-573, -6)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1275, 118)
+        Me.Panel1.Size = New System.Drawing.Size(1975, 118)
         Me.Panel1.TabIndex = 29
         '
         'pbProfilePic
         '
         Me.pbProfilePic.BackColor = System.Drawing.Color.Transparent
         Me.pbProfilePic.Image = Global.reviewsProj.My.Resources.Resources.prof_pic
-        Me.pbProfilePic.Location = New System.Drawing.Point(1159, 19)
+        Me.pbProfilePic.Location = New System.Drawing.Point(1869, 19)
         Me.pbProfilePic.Margin = New System.Windows.Forms.Padding(4)
         Me.pbProfilePic.Name = "pbProfilePic"
         Me.pbProfilePic.Size = New System.Drawing.Size(76, 65)
@@ -69,7 +69,7 @@ Partial Class emailsBackupsStatistics
         'lblCurrentUser
         '
         Me.lblCurrentUser.AutoSize = True
-        Me.lblCurrentUser.Location = New System.Drawing.Point(1147, 88)
+        Me.lblCurrentUser.Location = New System.Drawing.Point(1857, 88)
         Me.lblCurrentUser.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCurrentUser.Name = "lblCurrentUser"
         Me.lblCurrentUser.Size = New System.Drawing.Size(92, 16)
@@ -83,7 +83,7 @@ Partial Class emailsBackupsStatistics
         Me.wiganNews.BackColor = System.Drawing.Color.Transparent
         Me.wiganNews.Font = New System.Drawing.Font("Times New Roman", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.wiganNews.ForeColor = System.Drawing.Color.Black
-        Me.wiganNews.Location = New System.Drawing.Point(688, 15)
+        Me.wiganNews.Location = New System.Drawing.Point(1031, 15)
         Me.wiganNews.Name = "wiganNews"
         Me.wiganNews.Size = New System.Drawing.Size(448, 90)
         Me.wiganNews.TabIndex = 29
@@ -95,7 +95,7 @@ Partial Class emailsBackupsStatistics
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.reviewsProj.My.Resources.Resources.bckgrnd
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(692, 431)
+        Me.ClientSize = New System.Drawing.Size(1401, 431)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "emailsBackupsStatistics"
