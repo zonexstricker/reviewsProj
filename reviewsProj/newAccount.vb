@@ -4,7 +4,7 @@ Imports System.Security.Policy
 Public Class newAccount
 
     Dim fd As OpenFileDialog = New OpenFileDialog()
-    Dim strFileName As String
+    Dim strFileName As String = ""
     Dim MaxRows As Integer 'maxiumum rows
     Dim MaxCol As Integer
     Dim curRow As Integer = 0 'current row
@@ -12,26 +12,50 @@ Public Class newAccount
     Dim ds As New DataSet 'whenever a table moves from access it becomes a dataset when in vb
     Dim da As New OleDb.OleDbDataAdapter 'the data adapter is used to push data from vb into access and access into vb
     Dim sql As String 'The sql command
+    Dim valPass As Boolean 
+
+    Private Sub validationCheck()
+        If presenceCheck(txtBoxPassword.Text) = False Then 'calls the validation module, specifically the presence check, it passes the txtBoxPassword's contents by value and then returns a false if it is empty, true if it contains data
+            MsgBox("Please enter a password")
+            Exit Sub
+        End If
+        If presenceCheck(txtBoxUsername.Text) = False Then '^ but username
+            MsgBox("Please enter a username")
+            Exit Sub
+        End If
+        If presenceCheck(txtBoxFirst.Text) = False Then 'calls the validation module, specifically the presence check, it passes the txtBoxPassword's contents by value and then returns a false if it is empty, true if it contains data
+            MsgBox("Please enter a first name")
+            Exit Sub
+        End If
+        If presenceCheck(txtBoxSurname.Text) = False Then '^ but username
+            MsgBox("Please enter a surname")
+            Exit Sub
+        End If
+
+        valPass = True
+    End Sub
 
     Private Sub sSql(sender As Object, e As EventArgs) Handles PictureBox1.Click 'this adds the new user to the account system
-        sql = "SELECT * FROM Users"
-        da = New OleDb.OleDbDataAdapter(sql, conn)
-        da.Fill(ds, "DSUsers") 'this is the dataset made from the table "unverifedReviews"
-        MaxRows = ds.Tables("DSUsers").Rows.Count
-        Dim cb As New OleDb.OleDbCommandBuilder(da)
-        cb.QuotePrefix = "["
-        cb.QuoteSuffix = "]"
-        Dim dsNewRow As DataRow
-        dsNewRow = ds.Tables("DSUsers").NewRow()
-        ds.Tables("DSUsers").Rows.Add(dsNewRow) 'Adds the new row into the dataset 
-        dsNewRow.Item("UserID") = txtBoxUsername.Text
-        dsNewRow.Item("FirstName") = txtBoxFirst.Text
-        dsNewRow.Item("Surname") = txtBoxSurname.Text
-        dsNewRow.Item("UserPass") = txtBoxPassword.Text
-        dsNewRow.Item("PfP") = strFileName
-        da.Update(ds, "DSUsers")
-        MsgBox("Your profile has been added to the database!")
-
+        Call validationCheck()
+        If valPass = True Then
+            sql = "SELECT * FROM Users"
+            da = New OleDb.OleDbDataAdapter(sql, conn)
+            da.Fill(ds, "DSUsers") 'this is the dataset made from the table "unverifedReviews"
+            MaxRows = ds.Tables("DSUsers").Rows.Count
+            Dim cb As New OleDb.OleDbCommandBuilder(da)
+            cb.QuotePrefix = "["
+            cb.QuoteSuffix = "]"
+            Dim dsNewRow As DataRow
+            dsNewRow = ds.Tables("DSUsers").NewRow()
+            ds.Tables("DSUsers").Rows.Add(dsNewRow) 'Adds the new row into the dataset 
+            dsNewRow.Item("UserID") = txtBoxUsername.Text
+            dsNewRow.Item("FirstName") = txtBoxFirst.Text
+            dsNewRow.Item("Surname") = txtBoxSurname.Text
+            dsNewRow.Item("UserPass") = txtBoxPassword.Text
+            dsNewRow.Item("PfP") = strFileName
+            da.Update(ds, "DSUsers")
+            MsgBox("Your profile has been added to the database!")
+        End If
 
 
 
