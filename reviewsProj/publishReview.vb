@@ -1,6 +1,6 @@
 ﻿
-
-
+Imports outlook = Microsoft.Office.Interop.Outlook
+Imports System.Net.Mail
 Imports System.Data.OleDb
 
 Public Class publishReview
@@ -105,5 +105,78 @@ Public Class publishReview
     Private Sub publishReview_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblCurrentUser.Text = UserLoggedIn
         pbProfilePic.ImageLocation = profilePicLookup(userOrAdmin:=True)
+    End Sub
+
+    'Private Sub Form21_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    '    ' Set the caption bar text of the form.   
+    '    Me.Text = "ljknljljjkbkjb"
+    'End Sub
+
+    'Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    '    Try
+    '        Dim Smtp_Server As New SmtpClient
+    '        Dim e_mail As New MailMessage()
+    '        Smtp_Server.UseDefaultCredentials = False
+    '        Smtp_Server.Credentials = New Net.NetworkCredential("oscarcraftstyle@gmail.com", "#MPVynB5RwOKj8'")
+    '        Smtp_Server.Port = 587
+    '        Smtp_Server.EnableSsl = True
+    '        Smtp_Server.Host = "smtp.gmail.com"
+
+    '        e_mail = New MailMessage()
+    '        e_mail.From = New MailAddress("oscarcraftstyle@gmail.com")
+    '        e_mail.To.Add("ololololivia@gmail.com")
+    '        e_mail.Subject = "Email Sending"
+    '        e_mail.IsBodyHtml = False
+    '        e_mail.Body = "peepee poo poo"
+    '        Smtp_Server.Send(e_mail)
+    '        MsgBox("Mail Sent")
+
+    '    Catch error_t As Exception
+    '        MsgBox(error_t.ToString)
+    '    End Try
+    'End Sub
+
+
+
+
+    Private Sub email()
+        sql = "SELECT UserID FROM Users"
+        da = New OleDb.OleDbDataAdapter(sql, conn)
+        da.Fill(ds, "DSEmail") 'this is the dataset made from the table "Sites"
+        Dim emailaddress() As String
+
+        MaxRows = ds.Tables("DSEmail").Rows.Count
+        ReDim emailaddress(MaxRows - 1)
+
+        For i = 0 To MaxRows - 1
+            emailaddress(i) = ds.Tables("DSEmail").Rows(i).Item(0)
+        Next
+
+        Dim OutlookMessage As outlook.MailItem          'queoted because reqiuered libary Is Not improted into the system  
+        Dim AppOutLook As New outlook.Application
+
+        Dim objNS As outlook._NameSpace = AppOutLook.Session
+        Dim objFolder As outlook.MAPIFolder
+        objFolder = objNS.GetDefaultFolder(outlook.OlDefaultFolders.olFolderDrafts)
+        'Try
+        OutlookMessage = AppOutLook.CreateItem(outlook.OlItemType.olMailItem)
+
+        Dim Recipents As outlook.Recipients = OutlookMessage.Recipients
+        For i = 0 To MaxRows - 1
+            Recipents.Add("ololololiviaw@gmail.com")
+        Next
+        OutlookMessage.Subject = "Sending through Outlook"
+        OutlookMessage.Body = "Testing outlook Mail"
+        OutlookMessage.BodyFormat = outlook.OlBodyFormat.olFormatHTML
+        OutlookMessage.Save()
+        OutlookMessage.Move(objFolder)
+        'Catch ex As Exception
+        '    MessageBox.Show("Mail could not be sent")
+        'End Try
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Call email()
+
     End Sub
 End Class

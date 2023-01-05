@@ -45,6 +45,7 @@ Partial Class publishReview
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.wiganNews = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.pbProfilePic, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -134,7 +135,7 @@ Partial Class publishReview
         Me.cmbxDeliverySpeed.FormattingEnabled = True
         Me.cmbxDeliverySpeed.Items.AddRange(New Object() {"Very Fast", "Fast", "Ok", "Slow", "Very Slow"})
         Me.cmbxDeliverySpeed.Location = New System.Drawing.Point(61, 180)
-        Me.cmbxDeliverySpeed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbxDeliverySpeed.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbxDeliverySpeed.Name = "cmbxDeliverySpeed"
         Me.cmbxDeliverySpeed.Size = New System.Drawing.Size(160, 24)
         Me.cmbxDeliverySpeed.TabIndex = 8
@@ -147,7 +148,7 @@ Partial Class publishReview
         Me.cmbxQuality.FormattingEnabled = True
         Me.cmbxQuality.Items.AddRange(New Object() {"Very High", "High", "Ok", "Poor", "Very Poor"})
         Me.cmbxQuality.Location = New System.Drawing.Point(61, 209)
-        Me.cmbxQuality.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbxQuality.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbxQuality.Name = "cmbxQuality"
         Me.cmbxQuality.Size = New System.Drawing.Size(160, 24)
         Me.cmbxQuality.TabIndex = 9
@@ -172,7 +173,7 @@ Partial Class publishReview
         Me.cmbxQuantity.FormattingEnabled = True
         Me.cmbxQuantity.Items.AddRange(New Object() {"Very High", "High", "Medium", "Low", "Very Low"})
         Me.cmbxQuantity.Location = New System.Drawing.Point(61, 239)
-        Me.cmbxQuantity.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbxQuantity.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbxQuantity.Name = "cmbxQuantity"
         Me.cmbxQuantity.Size = New System.Drawing.Size(160, 24)
         Me.cmbxQuantity.TabIndex = 11
@@ -185,7 +186,7 @@ Partial Class publishReview
         Me.cmbxCom.FormattingEnabled = True
         Me.cmbxCom.Items.AddRange(New Object() {"Very Easy", "Easy", "Ok", "Hard", "None"})
         Me.cmbxCom.Location = New System.Drawing.Point(61, 270)
-        Me.cmbxCom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbxCom.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbxCom.Name = "cmbxCom"
         Me.cmbxCom.Size = New System.Drawing.Size(160, 24)
         Me.cmbxCom.TabIndex = 12
@@ -198,7 +199,7 @@ Partial Class publishReview
         Me.cmbxResp.FormattingEnabled = True
         Me.cmbxResp.Items.AddRange(New Object() {"Very Quick", "Quick", "Ok", "Slow", "None"})
         Me.cmbxResp.Location = New System.Drawing.Point(61, 303)
-        Me.cmbxResp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbxResp.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbxResp.Name = "cmbxResp"
         Me.cmbxResp.Size = New System.Drawing.Size(160, 24)
         Me.cmbxResp.TabIndex = 13
@@ -211,7 +212,7 @@ Partial Class publishReview
         Me.cmbxServ.FormattingEnabled = True
         Me.cmbxServ.Items.AddRange(New Object() {"Very Good", "Good", "Ok", "Bad", "None"})
         Me.cmbxServ.Location = New System.Drawing.Point(61, 336)
-        Me.cmbxServ.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbxServ.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbxServ.Name = "cmbxServ"
         Me.cmbxServ.Size = New System.Drawing.Size(160, 24)
         Me.cmbxServ.TabIndex = 14
@@ -221,7 +222,7 @@ Partial Class publishReview
         Me.txtBoxSiteName.BackColor = System.Drawing.Color.Firebrick
         Me.txtBoxSiteName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtBoxSiteName.Location = New System.Drawing.Point(61, 148)
-        Me.txtBoxSiteName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtBoxSiteName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtBoxSiteName.Name = "txtBoxSiteName"
         Me.txtBoxSiteName.Size = New System.Drawing.Size(161, 22)
         Me.txtBoxSiteName.TabIndex = 15
@@ -231,7 +232,7 @@ Partial Class publishReview
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.reviewsProj.My.Resources.Resources.BtnSubmit
         Me.PictureBox1.Location = New System.Drawing.Point(61, 397)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(300, 100)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -333,6 +334,15 @@ Partial Class publishReview
         Me.wiganNews.TabIndex = 11
         Me.wiganNews.Text = "Wigan News"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(382, 504)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(70, 41)
+        Me.Button1.TabIndex = 34
+        Me.Button1.Text = "testicle"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'publishReview
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -340,6 +350,7 @@ Partial Class publishReview
         Me.BackgroundImage = Global.reviewsProj.My.Resources.Resources.bckgrnd
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(478, 558)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.txtBoxSiteName)
@@ -356,7 +367,7 @@ Partial Class publishReview
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "publishReview"
         Me.Text = "Publish a Review"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -395,4 +406,5 @@ Partial Class publishReview
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents wiganNews As Label
+    Friend WithEvents Button1 As Button
 End Class

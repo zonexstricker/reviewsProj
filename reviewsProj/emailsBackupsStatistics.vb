@@ -3,8 +3,7 @@ Imports System.Data.OleDb
 Imports System.Data.SqlClient
 Imports Microsoft.Office.Interop
 Imports Excel = Microsoft.Office.Interop.Excel
-Imports outlook = Microsoft.Office.Interop.Outlook
-Imports System.Net.Mail
+
 Public Class emailsBackupsStatistics
 
 
