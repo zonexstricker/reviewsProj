@@ -20,7 +20,10 @@ Public Class emailsBackupsStatistics
         lblCurrentUser.Text = UserLoggedIn
         pbProfilePic.ImageLocation = profilePicLookup(userOrAdmin:=False)
 
-        sql = "SELECT Reviews.SiteID, Count(Reviews.UserID) AS CountOfUserID FROM Reviews GROUP BY Reviews.SiteID"
+        sql = "SELECT Sites.SiteName, Count(Reviews.ReviewID) AS CountOfReviewID
+FROM Sites INNER JOIN Reviews ON Sites.SiteID = Reviews.SiteID
+GROUP BY Sites.SiteID, Sites.SiteName;
+"
         conn.Open()
         da = New OleDb.OleDbDataAdapter(sql, conn)
         Dim ds As New DataSet()
@@ -42,16 +45,14 @@ Public Class emailsBackupsStatistics
         Legend1.Name = "Legend1"
         Chart1.Legends.Add(Legend1)
         Chart1.Location = New System.Drawing.Point(50, 120)
-        Chart1.Name = "Review Chart"
-        Chart1.Titles.Add("Review Chart")
-        Series1.Name = "Review Chart"
-        Chart1.Titles.Add("Review Chart")
-        Series1.Name = "Review"
+        Series1.Name = "Reviews per Site"
+        Chart1.Titles.Add("Reviews per Site")
+        Series1.Name = "Reviews per Site"
         Chart1.Series.Add(Series1)
         Chart1.Size = New System.Drawing.Size(400, 200)
 
-        Chart1.Series("Review").XValueMember = "SiteID"
-        Chart1.Series("Review").YValueMembers = "CountOfUserID"
+        Chart1.Series("Reviews per Site").XValueMember = "SiteName"
+        Chart1.Series("Reviews per Site").YValueMembers = "CountOfReviewID"
 
         Chart1.DataSource = ds.Tables("DSRev")
         Chart1.Palette = ChartColorPalette.Chocolate
@@ -63,7 +64,10 @@ Public Class emailsBackupsStatistics
 
     End Sub
     Sub graph2()
-        sql = "SELECT Reviews.UserID, Count(Reviews.ReviewID) AS CountOfReviewID FROM Reviews GROUP BY Reviews.UserID;"
+        sql = "SELECT Reviews.UserID, Users.FirstName, Count(Reviews.ReviewID) AS CountOfReviewID
+FROM Users INNER JOIN Reviews ON Users.UserID = Reviews.UserID
+GROUP BY Reviews.UserID, Users.FirstName;
+"
 
         da = New OleDb.OleDbDataAdapter(sql, conn)
         Dim ds As New DataSet()
@@ -85,16 +89,14 @@ Public Class emailsBackupsStatistics
         Legend1.Name = "Legend1"
         Chart1.Legends.Add(Legend1)
         Chart1.Location = New System.Drawing.Point(500, 120)
-        Chart1.Name = "Review Chart"
-        Chart1.Titles.Add("Review Chart")
-        Series1.Name = "Review Chart"
-        Chart1.Titles.Add("Review Chart")
-        Series1.Name = "Review"
+        Chart1.Name = "Reviews per User"
+        Chart1.Titles.Add("Reviews per User")
+        Series1.Name = "Reviews per User"
         Chart1.Series.Add(Series1)
         Chart1.Size = New System.Drawing.Size(400, 200)
 
-        Chart1.Series("Review").XValueMember = "UserID"
-        Chart1.Series("Review").YValueMembers = "CountOfReviewID"
+        Chart1.Series("Reviews per User").XValueMember = "UserID"
+        Chart1.Series("Reviews per User").YValueMembers = "CountOfReviewID"
 
         Chart1.DataSource = ds.Tables("DSRev")
         Chart1.Palette = ChartColorPalette.Chocolate
