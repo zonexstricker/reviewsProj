@@ -138,7 +138,7 @@ Partial Class passEntry
         Me.btnForgotPassword.Name = "btnForgotPassword"
         Me.btnForgotPassword.Size = New System.Drawing.Size(139, 23)
         Me.btnForgotPassword.TabIndex = 31
-        Me.btnForgotPassword.Text = "Forgot Passoword"
+        Me.btnForgotPassword.Text = "Forgot Password"
         Me.btnForgotPassword.UseVisualStyleBackColor = True
         '
         'passEntry
